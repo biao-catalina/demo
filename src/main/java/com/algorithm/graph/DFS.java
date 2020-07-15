@@ -33,6 +33,12 @@ public class DFS {
         this.mark = new boolean[m][n];
     }
 
+    public void dfs(int x, int y) {
+        mark[x][y] = true;
+        dfs(x, y, 0);
+
+    }
+
     public void dfs(int x, int y, int step) {
         if (data[x][y] > 0) {
             return;
@@ -71,7 +77,7 @@ public class DFS {
             }
         }
         DFS dfs = new DFS(m, n, scanner.nextInt(), scanner.nextInt(), data);
-        dfs.dfs(scanner.nextInt(), scanner.nextInt(), 0);
+        dfs.dfs(scanner.nextInt(), scanner.nextInt());
         System.out.println(dfs.minStep);
     }
 }

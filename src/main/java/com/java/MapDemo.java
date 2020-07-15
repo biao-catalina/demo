@@ -6,12 +6,28 @@ import java.lang.reflect.Field;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MapDemo {
+
+
+    public static void main(String[] args) {
+        ConcurrentHashMap<Object, Object> map = new ConcurrentHashMap<>();
+        map.put("hello", "world");
+
+
+
+        System.out.println(Integer.toBinaryString(-1));
+
+
+    }
+
+
+
+
+
     static class Target{
         public int value = 10;
     }
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-
+    public void demo() throws NoSuchFieldException, IllegalAccessException {
         System.out.println(MapDemo.class.getResource("/").getPath());
 
         Field field = Unsafe.class.getDeclaredField("theUnsafe");
@@ -44,8 +60,6 @@ public class MapDemo {
         new Thread(() -> {
             map.put("hello", "world");
         }).start();
-
-
     }
 
 
