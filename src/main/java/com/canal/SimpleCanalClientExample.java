@@ -1,3 +1,4 @@
+/*
 package com.canal;
 
 import com.alibaba.otter.canal.client.CanalConnector;
@@ -89,3 +90,4 @@ public class SimpleCanalClientExample {
         }
     }
 }
+*/
