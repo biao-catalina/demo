@@ -23,6 +23,7 @@ public class CharTable {
 
     public static String normalize(String content) {
         String convert = CharTable.convert(content);
+        System.out.println(333);
         return convert.replaceAll("\\(", "")
                 .replaceAll("\\)", "")
                 .replaceAll("《", "")
