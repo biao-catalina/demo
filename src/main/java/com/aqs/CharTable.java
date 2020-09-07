@@ -19,11 +19,14 @@ public class CharTable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public static String normalize(String content) {
         String convert = CharTable.convert(content);
         System.out.println(333);
+        System.out.println(111);
+        System.out.println(222);
         return convert.replaceAll("\\(", "")
                 .replaceAll("\\)", "")
                 .replaceAll("《", "")
