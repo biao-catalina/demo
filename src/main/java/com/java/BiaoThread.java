@@ -1,7 +1,5 @@
 package com.java;
 
-import java.time.LocalDateTime;
-
 public class BiaoThread {
 
 /*    static {
@@ -11,12 +9,14 @@ public class BiaoThread {
 //    private native void start0();
 
     public static void main(String[] args) {
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println(localDateTime);
+        BiaoThread t = new BiaoThread();
+        String s = "aaa";
+        t.run(s);
+        System.out.println(s);
     }
 
-    private void run() {
-
+    private void run(String s) {
+        s = s.replace("a", "b");
     }
 
 }
