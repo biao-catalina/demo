@@ -1,11 +1,7 @@
 package com.algorithm.tree;
 
-import lombok.AllArgsConstructor;
-
 /**
  * @author admin
- * @description
- * @dateTime 2020-01-20 14:43:00
  */
 public class BinaryTree {
 
@@ -65,7 +61,6 @@ public class BinaryTree {
 }
 
 
-@AllArgsConstructor
 class Node {
     char value;
 
@@ -73,5 +68,9 @@ class Node {
 
     Node right;
 
-
+    public Node(char value, Node left, Node right) {
+        this.value = value;
+        this.left = left;
+        this.right = right;
+    }
 }
